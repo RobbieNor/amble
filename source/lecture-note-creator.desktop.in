@@ -1,0 +1,8 @@
+[Desktop Entry]
+_Name=Lecture Note Creator
+_Comment=LectureNoteCreator application
+Categories=GNOME;Utility;
+Exec=lecture-note-creator
+Icon=lecture-note-creator
+Terminal=false
+Type=Application
