@@ -1,0 +1,8 @@
+<glade-catalog name="lecture_note_creator_window" domain="glade-3" 
+               depends="gtk+" version="1.0">
+  <glade-widget-classes>
+    <glade-widget-class title="Lecture Note Creator Window" name="LectureNoteCreatorWindow" 
+                        generic-name="LectureNoteCreatorWindow" parent="GtkWindow"
+                        icon-name="widget-gtk-window"/>
+  </glade-widget-classes>
+</glade-catalog>

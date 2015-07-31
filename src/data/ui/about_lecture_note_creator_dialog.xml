@@ -1,0 +1,9 @@
+<glade-catalog name="about_lecture_note_creator_dialog" domain="glade-3" 
+               depends="gtk+" version="1.0">
+  <glade-widget-classes>
+    <glade-widget-class title="About Lecture Note Creator Dialog" name="AboutLectureNoteCreatorDialog" 
+                        generic-name="AboutLectureNoteCreatorDialog" parent="GtkAboutDialog"
+                        icon-name="widget-gtk-about-dialog"/>
+  </glade-widget-classes>
+
+</glade-catalog>
