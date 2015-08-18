@@ -48,7 +48,7 @@
     </columns>
     <data>
       <row>
-        <col id="0" translatable="yes">Errors Analysis</col>
+        <col id="0" translatable="yes">Error Analysis</col>
       </row>
       <row>
         <col id="0" translatable="yes">Laboratory Notebook</col>

@@ -339,7 +339,7 @@
     </data>
   </object>
   <object class="GtkAdjustment" id="note_number">
-    <property name="upper">100</property>
+    <property name="upper">99</property>
     <property name="step_increment">1</property>
     <property name="page_increment">10</property>
   </object>

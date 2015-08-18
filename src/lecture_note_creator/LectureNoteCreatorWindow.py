@@ -145,8 +145,8 @@ class LectureNoteCreatorWindow(Window):
 
     def on_createnote_clicked(self,widget):
         #Create Program Script
-        script = file(self.__workspacedir__ + "/script.sh",'w')
-        script.write("#!/bin/bash\n\n")
+        #script = file(self.__workspacedir__ + "/script.sh",'w')
+        #script.write("#!/bin/bash\n\n")
         #Load Settings
         #TODO: Popup asking if file is be overwritten with new template, or open existing file
         defaults = eval(open(self.__preferencesdir__ + "/defaults.conf",'r').read())
@@ -157,7 +157,7 @@ class LectureNoteCreatorWindow(Window):
         location = self.constructNoteLocation(defaults['nbkloc_chooser'])   
         #Constuct Title
         if options['seperate_types_button'] == True:
-            location = location + "/" + self.getComboActive(self.typebox)
+            location = location + "/" + self.getComboActive(self.typebox) + "s"
         if os.path.exists(location) == False:
             os.makedirs(location)
         title = self.getComboActive(self.typebox) + " "
@@ -179,7 +179,7 @@ class LectureNoteCreatorWindow(Window):
         path = location + '/' + title + application.getExtension()
         prog_line = application.createProgramLine(path)
         shutil.copy(self.__templatesdir__ + "/note" + application.getExtension(), path)
-        script.write(prog_line + "\n")
+        #script.write(prog_line + "\n")
         self.main_statusbar.push(self.status_id, "Note in progress. Awaiting Close") 
         subprocess.call(prog_line, shell=True)
         #Does a pdf file need to bee generated?
@@ -240,7 +240,7 @@ class LectureNoteCreatorWindow(Window):
             filename, file_extension = os.path.splitext(path)
             os.remove(filename + ".pdf")
         
-        self.main_statusbar.push(self.status_id, "Note Created. No Errors.") 
+        self.main_statusbar.push(self.status_id, "Note Created. No Errors.")
         
         
         
