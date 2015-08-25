@@ -1,0 +1,367 @@
+{
+   "Defaults":{
+      "Notebook Location":"/home/robbienor/Desktop/TestNotebook",
+      "Backup Location":"/home/robbienor/Documents/Programs/Git Repositories/lecture-note-creator/testing/bkp",
+      "Backup Routine":"tar.gz",
+      "UI Presets":{
+         "Level":3,
+         "Module":0,
+         "Topic":0,
+         "Type":0,
+         "Title":0,
+         "Application":"Xournal",
+         "Designation":2
+      }
+   },
+   "Settings":{
+      "Save":{
+         "Raw":false,
+         "PDF":true
+      },
+      "Backup":{
+         "Raw":false,
+         "PDF":true
+      },
+      "Other":{
+         "Generate HTML":true,
+         "Compress Backups":true,
+         "Backup to Notebook":true
+      }
+   },
+   "Course":{
+      "Depth":3,
+      "Headings":[
+         "Level",
+         "Module",
+         "Topic"
+      ],
+      "Types":{
+         "Lecture":"Lectures",
+         "Workshop":"Workshops",
+         "Example Class":"Example Classes",
+         "Tutorial":"Tutorials",
+         "Lab Session":"Lab Sessions",
+         "Weekly Problem":"Weekly Problems"
+      },
+      "Tree":{
+         "Level 1":{
+            "Position":0,
+            "Children":{
+               "Foundations of Physics 1":{
+                  "Position":0,
+                  "Children":{
+                     "Classical Mechanics":{
+                        "Position":0
+                     },
+                     "Thermodynamics":{
+                        "Position":1
+                     },
+                     "Waves and Optics":{
+                        "Position":2
+                     },
+                     "Modern Physics":{
+                        "Position":3
+                     },
+                     "Electromagnetism":{
+                        "Position":4
+                     }
+                  }
+               },
+               "Single Mathematics A":{
+                  "Position":1,
+                  "Children":{
+                     "Michealmas Term":{
+                        "Position":0
+                     },
+                     "Epiphany Term":{
+                        "Position":1
+                     },
+                     "Easter Term":{
+                        "Position":2
+                     }
+                  }
+               },
+               "Single Mathematics B":{
+                  "Position":2,
+                  "Children":{
+                     "Vectors":{
+                        "Position":0
+                     },
+                     "Ordinary Differential Equations":{
+                        "Position":1
+                     },
+                     "Fourier Series":{
+                        "Position":2
+                     },
+                     "Partial Differentiation":{
+                        "Position":3
+                     },
+                     "Taylor Series":{
+                        "Position":4
+                     },
+                     "Multiple Integration":{
+                        "Position":5
+                     },
+                     "Vector Calculus":{
+                        "Position":6
+                     },
+                     "Probability":{
+                        "Position":7
+                     }
+                  }
+               },
+               "Discovery Skills in Physics":{
+                  "Position":3,
+                  "Children":{
+                     "Error Analysis":{
+                        "Position":0
+                     },
+                     "Laboratory Notebook":{
+                        "Position":1
+                     },
+                     "Report Writing":{
+                        "Position":2
+                     },
+                     "Lab Reports":{
+                        "Position":3
+                     },
+                     "Group Problem Solving":{
+                        "Position":4
+                     },
+                     "Introduction to Programming":{
+                        "Position":5
+                     }
+                  }
+               },
+               "Introduction to Programming":{
+                  "Position":4,
+                  "Children":{
+                     "Michealmas Term":{
+                        "Position":0
+                     },
+                     "Epiphany Term":{
+                        "Position":1
+                     },
+                     "Easter Term":{
+                        "Position":2
+                     }
+                  }
+               }
+            },
+            "Level 2":{
+               "Position":1,
+               "Children":{
+                  "Foundations of Physics 2A":{
+                     "Position":0,
+                     "Children":{
+                        "Quantum Mechanics 2":{
+                           "Position":0
+                        },
+                        "Electromagnetism":{
+                           "Position":1
+                        }
+                     }
+                  },
+                  "Foundations of Physics 2B":{
+                     "Position":1,
+                     "Children":{
+                        "Condensed Matter Physics":{
+                           "Position":0
+                        },
+                        "Modern Optics":{
+                           "Position":1
+                        },
+                        "Thermodynamics":{
+                           "Position":2
+                        }
+                     }
+                  },
+                  "Mathematical Methods in Physics":{
+                     "Position":2,
+                     "Children":{
+                        "MM1":{
+                           "Position":0
+                        },
+                        "MM2":{
+                           "Position":1
+                        }
+                     }
+                  },
+                  "Laboratory Skills and Electronics":{
+                     "Position":3,
+                     "Children":{
+                        "Bridge Project":{
+                           "Position":0
+                        },
+                        "Computational Physics":{
+                           "Position":1
+                        },
+                        "Electronics":{
+                           "Position":2
+                        },
+                        "Long Experiment":{
+                           "Position":3
+                        },
+                        "Skills Sessions":{
+                           "Position":4
+                        }
+                     }
+                  },
+                  "Theoretical Physics 2":{
+                     "Position":4,
+                     "Children":{
+                        "Classical Mechanics":{
+                           "Position":0
+                        },
+                        "Quantum Theory 2":{
+                           "Position":1
+                        }
+                     }
+                  },
+                  "Stars and Galaxies":{
+                     "Position":5,
+                     "Children":{
+                        "Observational Techniques":{
+                           "Position":0
+                        },
+                        "Stars":{
+                           "Position":1
+                        },
+                        "Galaxies":{
+                           "Position":2
+                        }
+                     }
+                  }
+               }
+            },
+            "Level 3":{
+               "Position":2,
+               "Children":{
+                  "Foundations of Physics 3A":{
+                     "Position":0,
+                     "Children":{
+                        "Quantum Mechanics 3":{
+                           "Position":0
+                        },
+                        "Nuclear and Particle Physics 1":{
+                           "Position":1
+                        },
+                        "Nuclear and Particle Physics 2":{
+                           "Position":2
+                        }
+                     }
+                  },
+                  "Foundations of Physics 3B":{
+                     "Position":1,
+                     "Children":{
+                        "Statistical Physics":{
+                           "Position":0
+                        },
+                        "Condensed Matter Physics 1":{
+                           "Position":1
+                        },
+                        "Condensed Matter Physics 2":{
+                           "Position":2
+                        }
+                     }
+                  },
+                  "Laboratory Project":{
+                     "Position":2,
+                     "Children":{
+                        "Spatial Light Modulator":{
+                           "Position":0
+                        }
+                     }
+                  },
+                  "Physics Problem Solving":{
+                     "Position":3,
+                     "Children":{
+                        "General Problems":{
+                           "Position":0
+                        },
+                        "Computing Project":{
+                           "Position":1
+                        }
+                     }
+                  },
+                  "Team Project":{
+                     "Position":4,
+                     "Children":{
+                        "Coltraco Ultrasound Investigation":{
+                           "Position":0
+                        }
+                     }
+                  },
+                  "Theoretical Physics 3":{
+                     "Position":5,
+                     "Children":{
+                        "Relativistic Electrodynamics":{
+                           "Position":0
+                        },
+                        "Quantum Theory 3":{
+                           "Position":1
+                        }
+                     }
+                  }
+               }
+            },
+            "Level 4":{
+               "Position":3,
+               "Children":{
+                  "Advanced Physics 4":{
+                     "Position":0,
+                     "Children":{
+                        "Modern Atomic and Optical Physics":{
+                           "Position":0
+                        },
+                        "Optical Properties of Solids":{
+                           "Position":1
+                        },
+                        "Soft Condensed Matter Physics":{
+                           "Position":2
+                        }
+                     }
+                  },
+                  "Atoms, Lasers and Qubits":{
+                     "Position":1,
+                     "Children":{
+                        "Laser Physics":{
+                           "Position":0
+                        },
+                        "Quantum Information and Computing":{
+                           "Position":1
+                        }
+                     }
+                  },
+                  "Particle Theory":{
+                     "Position":2,
+                     "Children":{
+                        "Relativistic Quantum Mechanics":{
+                           "Position":0
+                        },
+                        "Gauge Field Theories":{
+                           "Position":1
+                        },
+                        "Phenomenology":{
+                           "Position":2
+                        }
+                     }
+                  },
+                  "Project":{
+                     "Position":3,
+                     "Children":{
+                        "Project":0,
+                        "Guest Seminars":{
+                           "Position":1
+                        },
+                        "Skills Sessions":{
+                           "Position":2
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}

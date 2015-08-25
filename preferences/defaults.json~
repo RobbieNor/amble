@@ -1,0 +1,157 @@
+{ "Defaults" : {
+	"Notebook Location" : "/home/robbienor/Desktop/TestNotebook",
+	"Backup Location" : "/home/robbienor/Documents/Programs/Git Repositories/lecture-note-creator/testing/bkp",
+	"Backup Routine" : "tar.gz",
+	"UI Presets" : {
+		"Level" : 3,
+		"Module" : 0,		
+		"Topic" : 0,
+		"Type" : 0,
+		"Title" : 0,
+		"Application" : "Xournal",
+		"Designation" : 2,		
+		},
+	},
+  "Settings" : {
+	"Save" : {
+		"Raw" : false,
+		"PDF" : true,
+		},
+	"Backup" : {
+		"Raw" : false,
+		"PDF" : true,
+		},
+	"Other" : {
+		"Generate HTML" : true,
+		"Compress Backups"  : true,
+		"Backup to Notebook" : true,
+	},
+  "Course" : {
+	"Depth" : 3,
+	"Headings" : ["Level", "Module", "Topic"],
+	"Types" : { "Lecture" : "Lectures", "Workshop" : "Workshops", "Example Class" : "Example Classes", "Tutorial" : "Tutorials", "Lab Session" : "Lab Sessions", "Weekly Problem" : "Weekly Problems"
+		},
+	"Tree" : {
+		"Level 1" : {
+			"Foundations of Physics 1" : { 
+				"Classical Mechanics" : 0,
+				"Thermodynamics" : 1,
+				"Waves and Optics" : 2,
+				"Modern Physics" : 3,
+				"Electromagnetism" : 4
+				},
+			"Single Mathematics A" : {
+				"Michealmas Term" : 0,
+				"Epiphany Term" : 1,
+				"Easter Term" : 2
+				},
+			"Single Mathematics B" : {
+				"Vectors" : 0,
+				"Ordinary Differential Equations" : 1,
+				"Fourier Series" : 2,
+				"Partial Differentiation" : 3,
+				"Taylor Series" : 4,
+				"Multiple Integration" : 5,
+				"Vector Calculus" : 6,
+				"Probability" : 7
+				},
+			"Discovery Skills in Physics" : {
+				"Error Analysis" : 0,
+				"Laboratory Notebook" : 1,
+				"Report Writing" : 2,
+				"Lab Reports" : 3,
+				"Group Problem Solving" : 4,
+				"Introduction to Programming" : 5
+				},
+			"Introduction to Programming" : {
+				"Michealmas Term" : 0,
+				"Epiphany Term" : 1,
+				"Easter Term" : 2
+				}
+			},
+		"Level 2" : {
+			"Foundations of Physics 2A" : {
+				"Quantum Mechanics 2" : 0,
+				"Electromagnetism" : 1				
+				},
+			"Foundations of Physics 2B" : {
+				"Condensed Matter Physics" : 0,
+				"Modern Optics" : 1,
+				"Thermodynamics" : 2
+				},
+			"Mathematical Methods in Physics" : {
+				"MM1" : 0,
+				"MM2" : 1,
+				},
+			"Laboratory Skills and Electronics" : {
+				"Bridge Project" : 0,
+				"Computational Physics" : 1,
+				"Electronics" : 2,
+				"Long Experiment" : 3,
+				"Skills Sessions" : 4
+				},
+			"Theoretical Physics 2" : {
+				"Classical Mechanics" : 0,
+				"Quantum Theory 2" : 1
+				},
+			"Stars and Galaxies" : {
+				"Observational Techniques" : 0,
+				"Stars" : 1,
+				"Galaxies" : 2				
+				},
+			},
+		"Level 3" : {
+			"Foundations of Physics 3A" : {
+				"Quantum Mechanics 3" : 0,
+				"Nuclear and Particle Physics 1" : 1,
+				"Nuclear and Particle Physics 2" : 2			
+				},
+			"Foundations of Physics 3B" : {
+				"Statistical Physics" : 0,
+				"Condensed Matter Physics 1" : 1,
+				"Condensed Matter Physics 2" : 2,
+				},
+			"Laboratory Project" : {
+				"Spatial Light Modulator" : 0
+				},
+			"Physics Problem Solving" : {
+				"General Problems" : 0,
+				"Computing Project" : 1
+				},
+			"Team Project" : {
+				"Coltraco Ultrasound Investigation" : 0
+				},
+			"Theoretical Physics 3" : {
+				"Relativistic Electrodynamics" : 0,
+				"Quantum Theory 3" : 1
+				}
+			},
+		"Level 4" : {
+			"Advanced Physics 4" : {
+				"Modern Atomic and Optical Physics" : 0,
+				"Optical Properties of Solids" : 1,
+				"Soft Condensed Matter Physics" : 2	
+				},
+			"Atoms, Lasers and Qubits" : {
+				"Laser Physics" : 0,
+				"Quantum Information and Computing" : 1				
+				},
+			"Particle Theory" : {
+				"Relativistic Quantum Mechanics" : 0,
+				"Gauge Field Theories" : 1,
+				"Phenomenology" : 2
+				},
+			"Project" : {
+				"Project" : 0,
+				"Guest Seminars" : 1,
+				"Skills Sessions" : 2				
+				}
+			}
+
+		}
+	
+	}
+	
+}
+
+

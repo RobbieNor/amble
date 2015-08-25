@@ -15,14 +15,14 @@ index_html = codecs.open(__indexhtml__	, "wb", "utf-8")
 index_html.write(u"""<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>""" + __scriptdir__ +"""</title>
+<title>%s</title>
 </head>
 <frameset cols="27%%, *">
   <frame src="tree.html">
   <frame name="viewer" src="">
 </frameset>
 </html>
-""")
+""" % __title__)
 index_html.close()
 
 #Write javascript to tree_html    
@@ -134,8 +134,10 @@ def walk(node):
     nodeid = node
     #expand = node.get_attr("expanded", False)
     expand = 0
+    skip = False
     if node == __scriptdir__:
         expand = 1
+        skip = True
     dir_name = os.path.basename(os.path.normpath(node))
     parent_path = os.path.abspath(os.path.join(node, os.pardir))
     pattern = node + '/*'
@@ -143,23 +145,27 @@ def walk(node):
     children = glob.glob(pattern)
     children.sort(key = lambda l:(os.path.isfile(l), l))
 
-    if len(children) > 0:
-        tree_html.write(u"""<nobr><tt><a href='javascript: toggleDivName("%s", %s)'>+</a>&nbsp;</tt>""" % (nodeid, [u"false", u"true"][int(expand)]))
+    if skip == False:
+        if len(children) > 0:
+            tree_html.write(u"""<nobr><tt><a href='javascript: toggleDivName("%s", %s)'>+</a>&nbsp;</tt>""" % (nodeid, [u"false", u"true"][int(expand)]))
+        else:
+            tree_html.write(u"<nobr><tt>&nbsp;&nbsp;</tt>")
+    
+    
+        if os.path.isdir(node):
+            tree_html.write(u"%s</nobr><br/>\n" % dir_name)
+        else:
+            tree_html.write(u"<a href='%s' target='viewer'>%s</a></nobr><br/>\n" % (node, dir_name))
+            
+        if len(children) > 0:
+            tree_html.write(u"<div id='%s' class='node%s'>" % (node, [u"_collapsed", ""][int(expand)]))
+            for child in children:
+                walk(child)
+    
+            tree_html.write(u"</div>\n")
     else:
-        tree_html.write(u"<nobr><tt>&nbsp;&nbsp;</tt>")
-
-
-    if os.path.isdir(node):
-        tree_html.write(u"%s</nobr><br/>\n" % dir_name)
-    else:
-        tree_html.write(u"<a href='%s' target='viewer'>%s</a></nobr><br/>\n" % (node, dir_name))
-        
-    if len(children) > 0:
-        tree_html.write(u"<div id='%s' class='node%s'>" % (node, [u"_collapsed", ""][int(expand)]))
         for child in children:
             walk(child)
-
-        tree_html.write(u"</div>\n")
 
 walk(__scriptdir__)
 tree_html.write(u"""</body></html>""")

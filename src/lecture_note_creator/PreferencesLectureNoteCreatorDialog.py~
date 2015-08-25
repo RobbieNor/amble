@@ -29,9 +29,9 @@ class PreferencesLectureNoteCreatorDialog(PreferencesDialog):
         super(PreferencesLectureNoteCreatorDialog, self).finish_initializing(builder)
 
         # Bind each preference widget to gsettings
-        #settings = Gio.Settings("net.launchpad.lecture-note-creator")
-        #widget = self.builder.get_object('example_entry')
-        #settings.bind("example", widget, "text", Gio.SettingsBindFlags.DEFAULT)
+        settings = Gio.Settings("net.launchpad.lecture-note-creator")
+        widget = self.builder.get_object('applicaion_chooser')
+        settings.bind("example", widget, "text", Gio.SettingsBindFlags.DEFAULT)
 
         # Code for other initialization actions should be added here.
 
@@ -84,7 +84,7 @@ class PreferencesLectureNoteCreatorDialog(PreferencesDialog):
                 #Loop through course info here
                 self.pref_statusbar.push(self.status_id, "Preferences Loaded") 
             except:
-                print "Error"
+                print "Error loading preferences"
 
 
         loadPreferences(self)

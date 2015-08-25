@@ -21,7 +21,7 @@
     </columns>
     <data>
       <row>
-        <col id="0" translatable="yes">tar -??? </col>
+        <col id="0" translatable="yes">tar.gz</col>
       </row>
     </data>
   </object>

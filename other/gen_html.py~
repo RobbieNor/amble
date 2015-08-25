@@ -6,22 +6,23 @@ import os, codecs, glob
 #__scriptdir__ = os.path.dirname(os.path.realpath(__file__))
 __scriptdir__ = '/home/robbienor/Documents/University/University Notebook'
 __title__ = os.path.basename(os.path.normpath(__scriptdir__))
-__indexhtml__ = "/home/robbienor/Documents/University/index.html"
-__treehtml__ = "/home/robbienor/Documents/University/tree.html"
+__outputdir__ = "/home/robbienor/Documents/University"
+__indexhtml__ = __outputdir__ + "/index.html"
+__treehtml__ = __outputdir__ + "/tree.html"
 
 #Write javascript header to index_html
 index_html = codecs.open(__indexhtml__	, "wb", "utf-8")
 index_html.write(u"""<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>""" + __scriptdir__ +"""</title>
+<title>%s</title>
 </head>
 <frameset cols="27%%, *">
   <frame src="tree.html">
   <frame name="viewer" src="">
 </frameset>
 </html>
-""")
+""" % __title__)
 index_html.close()
 
 #Write javascript to tree_html    
@@ -133,8 +134,10 @@ def walk(node):
     nodeid = node
     #expand = node.get_attr("expanded", False)
     expand = 0
+    skip = False
     if node == __scriptdir__:
         expand = 1
+	skip = True
     dir_name = os.path.basename(os.path.normpath(node))
     parent_path = os.path.abspath(os.path.join(node, os.pardir))
     pattern = node + '/*'

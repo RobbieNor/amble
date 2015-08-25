@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+	<?xml version="1.0" encoding="UTF-8"?>
 <!-- Generated with glade 3.18.3 -->
 <interface>
   <requires lib="gtk+" version="3.0"/>
@@ -7,11 +7,12 @@
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
     <property name="type">popup</property>
+    <property name="window_position">center</property>
     <property name="icon">../media/lecture-note-creator.svg</property>
     <property name="type_hint">normal</property>
     <property name="program_name">Lecture Note Creator</property>
     <property name="version">0.1</property>
-    <property name="copyright" translatable="yes">Robert Norman</property>
+    <property name="comments" translatable="yes">Te</property>
     <property name="website">http://www.github.com/RobbieNor/lecture-note-organiser</property>
     <property name="authors">Robert Norman</property>
     <property name="logo">../media/lecture-note-creator.svg</property>

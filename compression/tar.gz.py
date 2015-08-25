@@ -6,7 +6,6 @@ ext = ".tar.gz"
 def compress(extensions,location,title):
 	tar = tarfile.open(location + "/" + title + ext, "w:gz")
 	for extension in extensions:
-		print location + "/" + title + extension
 		tar.add(location + "/" + title + extension, arcname=str(title + extension))	
 	tar.close()
 	return location + "/" + title + ".tar.gz"
