@@ -29,9 +29,9 @@ class PreferencesLectureNoteCreatorDialog(PreferencesDialog):
         super(PreferencesLectureNoteCreatorDialog, self).finish_initializing(builder)
 
         # Bind each preference widget to gsettings
-        #settings = Gio.Settings("net.launchpad.lecture-note-creator")
-        #widget = self.builder.get_object('example_entry')
-        #settings.bind("example", widget, "text", Gio.SettingsBindFlags.DEFAULT)
+        settings = Gio.Settings("net.launchpad.lecture-note-creator")
+        widget = self.builder.get_object('application_chooser')
+        settings.bind("example", widget, "text", Gio.SettingsBindFlags.DEFAULT)
 
         # Code for other initialization actions should be added here.
 
