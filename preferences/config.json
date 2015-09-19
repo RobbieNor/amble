@@ -5,16 +5,16 @@
         "Choices": {
             "Bottom": 0,
             "Designation": 2,
-            "Folder": "Will",
+            "Folder": "",
             "Mid": 0,
-            "Prefix": "Bum",
+            "Prefix": "",
             "Program": 0,
-            "Title": "Example2",
+            "Title": "",
             "Top": 4,
-            "Type": 6
+            "Type": 2
         },
-        "Choices Saved": false,
-        "Notebook Location": "/home/robbienor/Documents"
+        "Choices Saved": true,
+        "Notebook Location": "/home/robbienor/Documents/University/University Notebook"
     },
     "Directory": {
         "Depth": 3,
@@ -357,23 +357,36 @@
             "tar.gz"
         ],
         "Programs": [
+            "INotebook",
             "Xournal"
         ]
     },
     "Settings": {
-        "Backup": {
-            "PDF": false,
-            "Raw": true
+        "INotebook": {
+            "Backup": {
+                "PDF": false,
+                "Raw": true
+            },
+            "Save": {
+                "PDF": true,
+                "Raw": true
+            }
         },
         "Other": {
             "Backup to Notebook": true,
             "Compress Backups": true,
-            "Generate HTML": false,
+            "Generate HTML": true,
             "Seperate by Type": true
         },
-        "Save": {
-            "PDF": true,
-            "Raw": false
+        "Xournal": {
+            "Backup": {
+                "PDF": false,
+                "Raw": true
+            },
+            "Save": {
+                "PDF": false,
+                "Raw": false
+            }
         }
     }
 }

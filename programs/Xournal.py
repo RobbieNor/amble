@@ -13,6 +13,3 @@ def createPDFLine(path):
 	filename, file_extension = os.path.splitext(path)
 	genpdf_line = "xournal '" + path + "' -e '" + filename +".pdf'"
 	return genpdf_line
-	
-	
-	

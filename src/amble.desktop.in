@@ -1,0 +1,8 @@
+[Desktop Entry]
+_Name=Amble
+_Comment=Amble application
+Categories=GNOME;Utility;
+Exec=amble
+Icon=amble
+Terminal=false
+Type=Application
