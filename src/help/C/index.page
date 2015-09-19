@@ -4,8 +4,8 @@
 
 <info>
   <!-- This shows in the title bar so does not show [icon] -->
-  <title type="text">Lecture Note Creator</title>
-  <desc>The <app>Lecture Note Creator</app> help.</desc>
+  <title type="text">Amble</title>
+  <desc>The <app>Amble</app> help.</desc>
   <credit type="author">
     <name>Your Name</name>
     <email>Your E-mail</email>
@@ -20,7 +20,7 @@
 <!-- This shows on the page in title font -->
 <!-- the icon only shows when installed -->
 <media type="image" mime="image/png" src="figures/icon.png">[icon]</media>
-<app>Lecture Note Creator</app> Help
+<app>Amble</app> Help
 </title>
 
 <p>This is an example guide page. It's main function is to link together the help topics.</p>

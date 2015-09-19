@@ -12,13 +12,13 @@ import sys
 try:
     import DistUtilsExtra.auto
 except ImportError:
-    print >> sys.stderr, 'To build lecture-note-creator you need https://launchpad.net/python-distutils-extra'
+    print >> sys.stderr, 'To build amble you need https://launchpad.net/python-distutils-extra'
     sys.exit(1)
 assert DistUtilsExtra.auto.__version__ >= '2.18', 'needs DistUtilsExtra.auto >= 2.18'
 
 def update_config(libdir, values = {}):
 
-    filename = os.path.join(libdir, 'lecture_note_creator_lib/lecture_note_creatorconfig.py')
+    filename = os.path.join(libdir, 'amble_lib/ambleconfig.py')
     oldvalues = {}
     try:
         fin = file(filename, 'r')
@@ -49,16 +49,16 @@ def move_desktop_file(root, target_data, prefix):
 
     old_desktop_path = os.path.normpath(root + target_data +
                                         '/share/applications')
-    old_desktop_file = old_desktop_path + '/lecture-note-creator.desktop'
+    old_desktop_file = old_desktop_path + '/amble.desktop'
     desktop_path = os.path.normpath(root + prefix + '/share/applications')
-    desktop_file = desktop_path + '/lecture-note-creator.desktop'
+    desktop_file = desktop_path + '/amble.desktop'
 
     if not os.path.exists(old_desktop_file):
         print ("ERROR: Can't find", old_desktop_file)
         sys.exit(1)
     elif target_data != prefix + '/':
         # This is an /opt install, so rename desktop file to use extras-
-        desktop_file = desktop_path + '/extras-lecture-note-creator.desktop'
+        desktop_file = desktop_path + '/extras-amble.desktop'
         try:
             os.makedirs(desktop_path)
             os.rename(old_desktop_file, desktop_file)
@@ -77,10 +77,10 @@ def update_desktop_file(filename, target_pkgdata, target_scripts):
 
         for line in fin:
             if 'Icon=' in line:
-                line = "Icon=%s\n" % (target_pkgdata + 'media/lecture-note-creator.svg')
+                line = "Icon=%s\n" % (target_pkgdata + 'media/amble.svg')
             elif 'Exec=' in line:
                 cmd = line.split("=")[1].split(None, 1)
-                line = "Exec=%s" % (target_scripts + 'lecture-note-creator')
+                line = "Exec=%s" % (target_scripts + 'amble')
                 if len(cmd) > 1:
                     line += " %s" % cmd[1].strip()  # Add script arguments back
                 line += "\n"
@@ -107,10 +107,10 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
         DistUtilsExtra.auto.install_auto.run(self)
 
         target_data = '/' + os.path.relpath(self.install_data, self.root) + '/'
-        target_pkgdata = target_data + 'share/lecture-note-creator/'
+        target_pkgdata = target_data + 'share/amble/'
         target_scripts = '/' + os.path.relpath(self.install_scripts, self.root) + '/'
 
-        values = {'__lecture_note_creator_data_directory__': "'%s'" % (target_pkgdata),
+        values = {'__amble_data_directory__': "'%s'" % (target_pkgdata),
                   '__version__': "'%s'" % self.distribution.get_version()}
         update_config(self.install_lib, values)
 
@@ -124,14 +124,14 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
 ##################################################################################
 
 DistUtilsExtra.auto.setup(
-    name='lecture-note-creator',
+    name='amble',
     version='0.1',
     #license='GPL-3',
     #author='Your Name',
     #author_email='email@ubuntu.com',
     #description='UI for managing …',
     #long_description='Here a longer description',
-    #url='https://launchpad.net/lecture-note-creator',
+    #url='https://launchpad.net/amble',
     cmdclass={'install': InstallAndUpdateDataDirectory}
     )
 
