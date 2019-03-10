@@ -1,0 +1,3 @@
+import amble
+
+amble.main()

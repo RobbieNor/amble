@@ -1,7 +1,4 @@
 # -*- Mode: Python; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
-### BEGIN LICENSE
-# This file is in the public domain
-### END LICENSE
 
 from locale import gettext as _
 
@@ -25,7 +22,7 @@ class AmbleWindow(Window):
 
     __programname__ = "Amble"
     __startdatetime__ = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
-    __programdir__ = os.path.expanduser("~") + "/Documents/Programs/Git Repositories/amble"
+    __programdir__ = os.path.expanduser("~") + "/Projects/amble"
     __preferencesdir__ = __programdir__ + "/preferences"
     __programsdir__ = __programdir__ + "/programs"
     __templatesdir__ = __programdir__ + "/templates"
@@ -87,8 +84,12 @@ class AmbleWindow(Window):
 
 
     def runFolderChooser(self, title):
-        chooser = Gtk.FileChooserDialog(title="Select Notebook Directory.",parent=self,action=Gtk.FileChooserAction.SELECT_FOLDER,
-                                  buttons=(Gtk.STOCK_CANCEL,Gtk.ResponseType.CANCEL,Gtk.STOCK_OPEN,Gtk.ResponseType.OK))
+        chooser = Gtk.FileChooserDialog(
+            title="Select Notebook Directory.",
+            parent=self,
+            action=Gtk.FileChooserAction.SELECT_FOLDER,
+            buttons=(Gtk.STOCK_CANCEL,Gtk.ResponseType.CANCEL,Gtk.STOCK_OPEN,Gtk.ResponseType.OK)
+        )
         ok = chooser.run()
         folder = None
         if ok:
@@ -239,7 +240,10 @@ class AmbleWindow(Window):
                 data = json.loads(json_data.read())
                 self.bottom_list.clear()
                 self.mid_list.clear()
-                mid_entries = sorted(data['Directory']['Tree'][top_item]['Children'].keys(), key=lambda x: data['Directory']['Tree'][top_item]['Children'][x]['Position'])
+                mid_entries = sorted(
+                    data['Directory']['Tree'][top_item]['Children'].keys(),
+                    key=lambda x: data['Directory']['Tree'][top_item]['Children'][x]['Position']
+                )
                 for i in range(len(mid_entries)):
                     self.mid_list.append()
                     self.mid_list[i][0] = mid_entries[i]
@@ -601,7 +605,7 @@ class AmbleWindow(Window):
                     menu_item.show()
                     self.mnu_routine_list.append(menu_item)
 
-        # Run Initiliaslisation Functions
+        # Run Initialisation Functions
         initialiseListStores(self)
         initialiseProgramList(self)
         initialiseMenuItems(self)

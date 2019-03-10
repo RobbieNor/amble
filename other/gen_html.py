@@ -2,13 +2,6 @@
 
 import os, codecs, glob
 
-#Find current directory
-#__scriptdir__ = os.path.dirname(os.path.realpath(__file__))
-#__scriptdir__ = '/home/robbienor/Documents/University/University Notebook'
-#__title__ = os.path.basename(os.path.normpath(__scriptdir__))
-#__outputdir__ = "/home/robbienor/Documents/University"
-#__indexhtml__ = __outputdir__ + "/index.html"
-#__treehtml__ = __outputdir__ + "/tree.html"
 
 def run(title, input_dir, output_dir):
     #Write javascript header to index_html

@@ -1,6 +1,6 @@
 {
     "Defaults": {
-        "Backup Location": "/home/robbienor/Documents/Programs/Git Repositories/lecture-note-creator/testing/bkp",
+        "Backup Location": ".workspace/amble/Documents/Programs/Git Repositories/lecture-note-creator/testing/bkp",
         "Backup Routine": "tar.gz",
         "Choices": {
             "Bottom": 0,
@@ -14,7 +14,7 @@
             "Type": 2
         },
         "Choices Saved": true,
-        "Notebook Location": "/home/robbienor/Documents/University/University Notebook"
+        "Notebook Location": ".workspace/amble/Documents/University/University Notebook"
     },
     "Directory": {
         "Depth": 3,
@@ -384,8 +384,8 @@
                 "Raw": true
             },
             "Save": {
-                "PDF": false,
-                "Raw": false
+                "PDF": true,
+                "Raw": true
             }
         }
     }
